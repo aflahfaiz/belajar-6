@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip>  // Untuk mengatur presisi desimal
+
+using namespace std;
+int main() {
+ // Variabel
+ double totalbiaya, pajak, totalAkhir, bayarPerOrang;
+ int jumlahOrang;
+ const double PERSEN_PAJAK = 0.10; 
+ cout << "_____________________________________" << "\n";
+ cout << " PROGRAM PEMBAGI TAGIHAN MAKAN MALAM " << "\n";
+ cout << "=====================================" << "\n";
+
+// Input dari user 
+ cout << "Masukkan total biaya pesanan : Rp ";
+ cin >> totalbiaya;
+ cout << "Masukkan jumlah orang : ";
+ cin >> jumlahOrang;
+ 
+// Proses Perhitungan
+ pajak = totalbiaya * 0.10;
+ totalAkhir = totalbiaya + pajak;
+ bayarPerOrang = totalAkhir / jumlahOrang;
+ setprecision(2)
+// Output Hasil
+ cout << "Ringkasan Pembayaran:" << "\n";
+ cout << "Total Biaya Awal : Rp " << totalbiaya << "\n";
+ cout << "Pajak (10%) : Rp " << pajak << "\n";
+ cout << "Total + Pajak : Rp " << totalAkhir << "\n";
+ cout << "Setiap orang membayar: Rp " << bayarPerOrang << "\n";
+ return 0;
+}
