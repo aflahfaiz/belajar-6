@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int T;
+  cin >> T;
+  
+  if ( T < 28) {
+    cout << "PEMANAS AKTIF";
+  }else if ( T > 32) {
+    cout << "BLOWER AKTIF";
+  }else {
+    cout << "SUHU AMAN";
+  }
+  
+  return 0;
+}
