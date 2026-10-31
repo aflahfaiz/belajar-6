@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // Deklarasi variabel dengan tipe data yang tepat
+    string nama = "Rian";
+    int umur = 19;
+    double ipk = 3.82;
+    char nilaiHuruf = 'A';
+    bool isAktif = true;
+
+    // Menampilkan ke layar
+    cout << "Nama       : " << nama << endl;
+    cout << "Umur       : " << umur << " tahun" << endl;
+    cout << "IPK        : " << ipk << endl;
+    cout << "Nilai      : " << nilaiHuruf << endl;
+    cout << "Status     : " << isAktif << endl; // Mencetak angka 1 untuk true
+
+    return 0;
+}
