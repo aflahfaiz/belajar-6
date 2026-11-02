@@ -1,0 +1,17 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int p, q, n, m;
+    int i;
+    cin >> p >> q >> n >> m;
+    
+    for (int k = 1; k <= n; k+=1) {
+        i += (pow(p, k)) * (pow(k, q));
+    }
+     cout << i % m;
+
+    return 0;
+}
