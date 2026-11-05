@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int jumlahData;
+
+    cout << "=== PROGRAM MENGHITUNG RATA-RATA, NILAI TERTINGGI & TERENDAH ===" << endl;
+    cout << "Masukkan jumlah data: ";
+    cin >> jumlahData;
+
+    // Menyiapkan array sesuai jumlah data yang diinput
+    double nilai[jumlahData];
+    double total = 0;
+
+    cout << endl;
+    // 1. Proses Menginputkan Nilai ke dalam Array
+    for (int i = 0; i < jumlahData; i++) {
+        cout << "Masukkan nilai ke-" << (i + 1) << ": ";
+        cin >> nilai[i];
+        total += nilai[i]; // Menjumlahkan semua nilai secara bertahap
+    }
+
+    // Mengasumsikan elemen pertama (index 0) sebagai nilai tertinggi dan terendah awal
+    double tertinggi = nilai[0];
+    double terendah = nilai[0];
+
+    // 2. Mencari Nilai Tertinggi dan Terendah
+    for (int i = 1; i < jumlahData; i++) {
+        if (nilai[i] > tertinggi) {
+            tertinggi = nilai[i];
+        }
+        if (nilai[i] < terendah) {
+            terendah = nilai[i];
+        }
+    }
+
+    // 3. Menhitung Rata-rata
+    double rataRata = total / jumlahData;
+
+    // 4. Menampilkan Hasil
+    cout << "\n================ HASIL ================" << endl;
+    cout << "Rata-rata      : " << rataRata << endl;
+    cout << "Nilai Tertinggi : " << tertinggi << endl;
+    cout << "Nilai Terendah  : " << terendah << endl;
+
+    return 0;
+}
