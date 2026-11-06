@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i = 1;         // Variabel penghitung (counter) dimulai dari 1
+    int total = 0;     // Variabel untuk menyimpan hasil penjumlahan
+
+    // Memulai perulangan do-while
+    do {
+        total += i;    // Menambahkan nilai i ke dalam total (sama dengan: total = total + i)
+        i++;           // Menaikkan nilai i sebesar 1 agar perulangan berjalan maju
+    } while (i <= 5);  // Kondisi: perulangan akan terus berjalan selama i kurang dari atau sama dengan 5
+
+    // Menampilkan hasil akhir
+    cout << "Jumlah angka 1-5 adalah: " << total << endl;
+
+    return 0;
+}
